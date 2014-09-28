@@ -18,11 +18,13 @@ Package.onUse(function(api) {
 
   api.use(['mizzao:timesync'], ['client', 'server']);
 
-  api.addFiles(['stratogee:relative-time.js'], 'client');
+  api.addFiles(['relative-time.coffee'], 'client');
+  api.export('RelativeTime', ['client']);
+
 });
 
 Package.onTest(function(api) {
   api.use('tinytest');
   api.use('stratogee:relative-time');
-  api.addFiles('stratogee:relative-time-tests.js');
+  api.addFiles('relative-time-tests.js');
 });

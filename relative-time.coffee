@@ -1,4 +1,4 @@
-@RelativeTime = 
+RelativeTime = 
 	from: (time) ->
 		diff = TimeSync.serverTime() - time.valueOf()
 
@@ -27,4 +27,4 @@
 		else
 		  moment(time).format('MMM D, YYYY') + " at " + moment(time).format('h:mm a')
 
-UI.registerHelper "relativeTime", relativeTime
+UI.registerHelper "relativeTime", RelativeTime.from
