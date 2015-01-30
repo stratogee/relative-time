@@ -7,7 +7,9 @@ RelativeTime =
     hours = minutes / 60
     days = hours / 24
 
-    if seconds < 10
+    # console.log [days, hours, minutes, seconds].join(", ")
+
+    if seconds < 25
       "just now"
     else if seconds < 120
       "a minute ago"
@@ -18,9 +20,9 @@ RelativeTime =
     else if hours < 3
       "#{Math.floor(hours)} hours ago"
     else if moment(time).format("DD MM YYYY") is moment(TimeSync.serverTime()).format("DD MM YYYY")
-      "today at #{moment(time).format('h:mm a').toLowerCase()}"
+      "today at #{moment(time).format('h:mma').toLowerCase()}"
     else if moment(time).format("DD MM YYYY") is moment(TimeSync.serverTime()).subtract(1, "days").format("DD MM YYYY")
-      "yesterday at #{moment(time).format('h:mm a').toLowerCase()}"
+      "yesterday at #{moment(time).format('h:mma').toLowerCase()}"
     else if days < 90
       moment(time).format('MMM D') + " at " + moment(time).format('h:mm a')
     else

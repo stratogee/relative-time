@@ -1,7 +1,7 @@
 Package.describe({
   summary: "Nice relative time-ago based on Trello's algorithm",
   version: "1.0.0",
-  git: " \* Fill me in! *\ "
+  git: "https://github.com/stratogee/relative-time"
 });
 
 Package.onUse(function(api) {
@@ -28,3 +28,5 @@ Package.onTest(function(api) {
   api.use('stratogee:relative-time');
   api.addFiles('relative-time-tests.js');
 });
+
+
