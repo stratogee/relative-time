@@ -16,7 +16,7 @@ Package.onUse(function(api) {
     'mrt:moment@2.8.1'
   ], 'client');
 
-  api.use(['mizzao:timesync'], ['client', 'server']);
+  api.use(['mizzao:timesync@0.2.2'], ['client', 'server']);
 
   api.addFiles(['relative-time.coffee'], 'client');
   api.export('RelativeTime', ['client']);
