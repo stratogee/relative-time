@@ -1,10 +1,10 @@
 Package.describe({
-  summary: "Nice relative time-ago based on Trello's algorithm",
+  summary: "Nice relative time-ago based on Trello's algorithm and Moment.js",
   version: "1.0.0",
   git: "https://github.com/stratogee/relative-time"
 });
 
-Package.onUse(function(api) {
+Package.onUse(function (api) {
   api.versionsFrom('METEOR@0.9.3');
 
   api.use([
@@ -13,8 +13,8 @@ Package.onUse(function(api) {
     'underscore',
     'templating',
     'ui',
-    'mrt:moment@2.8.1'
-  ], 'client');
+    'momentjs:moment@2.10.6'
+  ], 'client');/
 
   api.use(['mizzao:timesync@0.2.2'], ['client', 'server']);
 
@@ -23,7 +23,7 @@ Package.onUse(function(api) {
 
 });
 
-Package.onTest(function(api) {
+Package.onTest(function (api) {
   api.use('tinytest');
   api.use('stratogee:relative-time');
   api.addFiles('relative-time-tests.js');
