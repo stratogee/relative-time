@@ -1,6 +1,6 @@
 Package.describe({
   summary: "Nice relative time-ago based on Trello's algorithm and Moment.js",
-  version: "1.0.0",
+  version: "1.0.1",
   git: "https://github.com/stratogee/relative-time"
 });
 
